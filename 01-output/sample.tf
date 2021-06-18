@@ -1,7 +1,11 @@
 output "sample" {
-  value = "Hello World"
+  value = var.sample
 }
 
 output "sample1" {
-  value = "Hello 'World"
+  value = "Hello World"
+}
+
+variable "sample" {
+  default = "Hello World"
 }

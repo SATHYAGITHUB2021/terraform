@@ -1,1 +1,1 @@
-sample6 = "Hello Boss"
+sample6="Hello Boss"

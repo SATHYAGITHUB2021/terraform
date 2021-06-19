@@ -50,3 +50,17 @@ variable "sample4" {
 output "sample4" {
   value = var.sample4[3]
 }
+
+# Variable map list variable
+
+variable "sample5" {
+  default = {
+    string  = "Hello"
+    number  = 2000
+    boolean = true
+  }
+}
+
+output "sample5" {
+  value = var.sample5["number"]
+}

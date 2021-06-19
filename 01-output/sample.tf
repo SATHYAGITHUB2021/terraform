@@ -33,7 +33,7 @@ variable "sample2" {
 
 # Boolean data type
 variable "sample3" {
-  default = yes
+  default = true
 }
 
 # Variable type list variable
@@ -42,7 +42,7 @@ variable "sample4" {
   default = [
     "Hello",
     1000,
-    yes,
+    true,
     "World"
   ]
 }

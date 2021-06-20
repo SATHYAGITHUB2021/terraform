@@ -5,9 +5,10 @@ resource "aws_instance" "sample" {
 
 terraform {
   backend "s3" {
-    bucket   = "sathya-aws-bucket"
-    key      = "sample/terraform.tfstate"
-    region = "us-east-1"
+    bucket         = "sathya-aws-bucket"
+    key            = "sample/terraform.tfstate"
+    region         = "us-east-1"
+    dynamodb_table = "sathya-dynamo-table"
   }
 }
 

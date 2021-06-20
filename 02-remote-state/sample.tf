@@ -8,7 +8,7 @@ terraform {
     bucket         = "sathya-aws-bucket"
     key            = "sample/terraform.tfstate"
     region         = "us-east-1"
-    dynamodb_table = "sathya-dynamo-table"
+    dynamodb_table = "terraform"
   }
 }
 

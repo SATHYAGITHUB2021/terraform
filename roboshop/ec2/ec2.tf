@@ -25,3 +25,11 @@ resource "aws_ec2_tag" "example" {
   key                   = "Name"
   value                 = element(var.COMPONENTS, count.index)
 }
+resource "aws_route53_record" "dns" {
+  count                 = length(var.COMPONENTS)
+  zone_id               = Z04373561YPMQTZH9WA2Z
+  name                  = "${element(var.COMPONENTS, count.index)}.roboshop.internal"
+  type                  = "A"
+  ttl                   = "300"
+  records               = [element(aws_spot_instance_request.cheap_worker.*.private_ip, count.index)]
+}

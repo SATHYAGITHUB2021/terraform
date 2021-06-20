@@ -27,7 +27,7 @@ resource "aws_ec2_tag" "example" {
 }
 resource "aws_route53_record" "dns" {
   count                 = length(var.COMPONENTS)
-  zone_id               = Z04373561YPMQTZH9WA2Z
+  zone_id               = "Z04373561YPMQTZH9WA2Z"
   name                  = "${element(var.COMPONENTS, count.index)}.roboshop.internal"
   type                  = "A"
   ttl                   = "300"

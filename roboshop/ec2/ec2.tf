@@ -37,6 +37,7 @@ resource "aws_ec2_tag" "monitor" {
 }
 
 resource "aws_route53_record" "dns" {
+  depends_on            = [time_sleep.wait]
   count                 = length(var.COMPONENTS)
   zone_id               = "Z04373561YPMQTZH9WA2Z"
   name                  = "${element(var.COMPONENTS, count.index)}.roboshop.internal"
